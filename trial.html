@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bubble Moving Footer</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer {
+    background-color: #013547;
+    position: relative;
+    height: 150px; /* Adjust height as needed */
+    overflow: hidden;
+  }
+
+  .bubble {
+    position: absolute;
+    bottom: -50px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    animation: bubbleAnimation 10s infinite linear;
+    transform-origin: center bottom;
+    box-shadow: 20px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  @keyframes bubbleAnimation {
+    0% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-100px) scale(1.2);
+    }
+    100% {
+      transform: translateY(-200px) scale(1);
+    }
+  }
+
+  .bubble:nth-child(2) {
+    left: 20%;
+    animation-delay: 2s;
+  }
+
+  .bubble:nth-child(3) {
+    left: 50%;
+    animation-delay: 4s;
+  }
+
+  .bubble:nth-child(4) {
+    left: 80%;
+    animation-delay: 2s;
+  }
+  .bubble:nth-child(5) {
+    left: 60%;
+    animation-delay: 4s;
+  }
+  .bubble:nth-child(6) {
+    left: 50%;
+    animation-delay: 2s;
+  }
+  .bubble:nth-child(7) {
+    left: 20%;
+    animation-delay: 5s;
+  }
+  .bubble:nth-child(8) {
+    left: 70%;
+    animation-delay: 2s;
+  }
+  .bubble:nth-child(9) {
+    left: 30%;
+    animation-delay: 7s;
+  }
+  .bubble:nth-child(10) {
+    left: 90%;
+    animation-delay: 1s;
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+</style>
+</head>
+<body>
+  <div class="footer">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="content">
+      <h2>Bubble Moving Footer</h2>
+      <p>This is a bubble-moving footer created using HTML and CSS.</p>
+    </div>
+  </div>
+</body>
+</html>
